@@ -15,6 +15,7 @@ A sample of collection has been included for seeding purposes. These can be opti
 - `createdb vinyl_stars_dev` 
 - `rails db:migrate`
 - `rails db:seed` (optional)
+- `RAILS_ENV=test rails db:seed` (optional)
 - `rails s`
 - You're done!
 

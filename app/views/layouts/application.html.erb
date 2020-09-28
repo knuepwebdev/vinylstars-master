@@ -53,5 +53,14 @@
 
     </div> <!-- /container -->
 
+    <!-- TODO: Create Google Analytics account and set the environment variable (GA_MEASUREMENT_ID) with the account ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= ENV['GA_MEASUREMENT_ID'] %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', <%= ENV['GA_MEASUREMENT_ID'] %>);
+    </script>
   </body>
 </html>

@@ -2,9 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "artists/edit", type: :view do
   before(:each) do
-    @artist = assign(:artist, Artist.create!(
-      :name => ""
-    ))
+    @artist = assign(:artist, Artist.first)
   end
 
   it "renders the edit artist form" do

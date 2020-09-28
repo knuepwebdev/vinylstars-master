@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe "categories/show", type: :view do
   before(:each) do
-    @category = assign(:category, Category.create!())
+    @category = assign(:category, Category.first)
   end
 
   it "renders attributes in <p>" do
     render
+    expect(response).to include(@category.title)
   end
 end
